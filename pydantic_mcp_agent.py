@@ -23,8 +23,8 @@ load_dotenv()
 
 
 def get_model():
-    llm = os.getenv("MODEL_CHOICE", "gpt-4o-mini")
-    base_url = os.getenv("BASE_URL", "https://api.openai.com/v1")
+    llm = os.getenv("MODEL_CHOICE", "llama3.2:1b")
+    base_url = os.getenv("BASE_URL", "http://localhost:11434/v1")
     api_key = os.getenv("LLM_API_KEY", "no-api-key-provided")
 
     ollama_model = OpenAIModel(
